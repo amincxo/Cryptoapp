@@ -12,7 +12,9 @@ dist
 dist-ssr
 *.local
 cryptoApi.js
-services
+./src/services/
+src/services/
+services/
 
 # Editor directories and files
 .vscode/*
