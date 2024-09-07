@@ -18,6 +18,7 @@ src/services/cryptoApi.js
 src/services/cryptoApi.js
 services/
 *.js
+src/services/cryptoApi.js
 
 # Editor directories and files
 .vscode/*
