@@ -6,7 +6,7 @@ import chartDown from "../../assets/chart-down.svg"
 
 import styles from './TableCoin.module.css'
 
-function TableCoin({coins , isLoding}) {
+function TableCoin({coins , isLoding , currency}) {
   return (
     <div className={styles.container} >
     {isLoding ? (<RotatingLines strokeColor='#3874ff' strokeWidth='2'  />) :
@@ -24,7 +24,7 @@ function TableCoin({coins , isLoding}) {
             </thead>
             <tbody>
                 {coins.map(coin => (
-                <TableRow coin={coin} key={coin.id} />
+                <TableRow coin={coin} key={coin.id} currency={currency}/>
             ))}
             </tbody>
         </table>
@@ -38,6 +38,7 @@ export default TableCoin
 
 
 const TableRow = ({
+    currency,
     coin :
      {name ,
      image ,
@@ -56,7 +57,11 @@ const TableRow = ({
             </div>
         </td>
         <td>{name}</td>
-        <td>${current_price.toLocaleString()}</td>
+        <td>
+            {currency == "usd" && "$"}
+            {currency == "eur" && "€"}
+            {currency == "jpy" && "¥"}
+            {current_price.toLocaleString()}</td>
         <td className={price_change > 0 ? styles.success : styles.error} >{price_change.toFixed(2)}%</td>
         <td>{total_volume.toLocaleString()}</td>
         <td>
