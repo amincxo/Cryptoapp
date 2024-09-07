@@ -12,9 +12,12 @@ dist
 dist-ssr
 *.local
 cryptoApi.js
-./src/services/
-src/services/
+cryptoApi.js
+./src/services/cryptoApi.js
+src/services/cryptoApi.js
+src/services/cryptoApi.js
 services/
+*.js
 
 # Editor directories and files
 .vscode/*
@@ -26,3 +29,5 @@ services/
 *.njsproj
 *.sln
 *.sw?
+
+src/services/cryptoApi.js
