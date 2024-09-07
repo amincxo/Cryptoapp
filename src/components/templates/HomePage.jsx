@@ -16,10 +16,14 @@ function HomePage() {
     useEffect( ()=> {
         setIsLoding(true)
         const getData = async ()=>{
-        const response = await fetch(getCoinList(page , currency))
-        const json = await response.json();
-        setCoins(json);
-        setIsLoding(false);
+        try {
+            const response = await fetch(getCoinList(page , currency))
+            const json = await response.json();
+            setCoins(json);
+            setIsLoding(false);
+        } catch (error) {
+            console.log(error)
+        }
     }
     getData();
     },[page , currency]);
