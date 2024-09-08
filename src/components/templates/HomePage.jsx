@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
+
+
 import TableCoin from '../modules/TableCoin';
 import { getCoinList } from '../../services/cryptoApi';
-
 import Pagination from '../modules/pagination';
 import Search from '../modules/Search';
+import Chart from '../modules/Chart';
 
 
 function HomePage() {
@@ -11,6 +13,7 @@ function HomePage() {
     const [isLoding , setIsLoding] = useState(true);
     const [page , setPage] = useState(1);
     const [currency , setCurrency] = useState("usd");
+    const [chart , setChart] = useState(null)
 
     
     useEffect( ()=> {
@@ -33,9 +36,9 @@ function HomePage() {
   return (
     <div>
         <Search  currency={currency} setCurrency={setCurrency} />
-        <TableCoin coins={coins} isLoding={isLoding} currency={currency}  />
+        <TableCoin coins={coins} isLoding={isLoding} currency={currency} setChart ={setChart} />
         <Pagination page={page} setPage={setPage} />
-
+        { !!chart && <Chart chart={chart} setChart={setChart} />}
     </div>
   )
 }
