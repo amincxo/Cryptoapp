@@ -1,8 +1,10 @@
-# React + Vite
+<h1> وب اپلیکیشن نمایش قیمت ارز دیجیتال</h1>
+<h3> لایبرری های استفاده شده</h3>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p> rect , vite , rechart , react Loader Spinner , RestAPI  </p>
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+فیچر ها 
+اکسپلور کردن بین صفحات مختلف 
+قابلیت سرچ ارز
+قابلیت تغییر قیمت به نوع ارز دلخواه {دلار یورو و ین}
+نمایش گراف ارز به سه حالت

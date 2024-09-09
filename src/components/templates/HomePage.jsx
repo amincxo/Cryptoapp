@@ -17,6 +17,7 @@ function HomePage() {
 
     
     useEffect( ()=> {
+        document.title = 'قیمت ارز دیجیتال';
         setIsLoding(true)
         const getData = async ()=>{
         try {
@@ -35,6 +36,7 @@ function HomePage() {
 
   return (
     <div>
+
         <Search  currency={currency} setCurrency={setCurrency} />
         <TableCoin coins={coins} isLoding={isLoding} currency={currency} setChart ={setChart} />
         <Pagination page={page} setPage={setPage} />
