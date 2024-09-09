@@ -1,7 +1,7 @@
 <h1> وب اپلیکیشن نمایش قیمت ارز دیجیتال</h1>
 <h3> لایبرری های استفاده شده</h3>
 
-<p> rect , vite , rechart , react Loader Spinner , RestAPI  </p>
+<p> react , vite , rechart , react Loader Spinner , RestAPI  </p>
 
 فیچر ها 
 اکسپلور کردن بین صفحات مختلف 
